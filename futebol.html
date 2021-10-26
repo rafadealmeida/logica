@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+
+        <h3>IMC</h3>
+   
+        <script>
+            function pulaLinha() {
+                document.write("<br>");
+            }
+        
+            function mostra(frase) {
+                document.write(frase);
+                pulaLinha();
+            }
+        
+          var vitorias = Number(prompt("Digite o número de vitórias do seu time"));
+          var empates = Number(prompt("Digite o número de empates do seu time"));
+          var pontos = vitorias *3 + empates;
+
+          mostra(`O seu time está com ${pontos} pontos.`)
+            
+        </script>
+            
+            
+
+        
+ </body>
+ </html>
+ 

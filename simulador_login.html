@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ 
+        <style>
+            body{
+                line-height: 2em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+ 
+    </head>
+ <body>
+
+
+
+        <h3>Ano de Copa</h3>
+   
+        <script>
+            function pulaLinha() {
+                document.write("<br>");
+            }
+        
+            function mostra(frase) {
+                document.write(frase);
+                pulaLinha();
+            }
+
+            var loginCadastrado = 'Tilta';
+            var senhaCadastrada = "1205";
+
+            tentativa = 1
+            maximoTentaticas = 3
+
+            while (tentativa <= 3){
+                var loginInformado = prompt('Digite seu login!');
+                var senhaInformado = prompt('Digite sua senha');
+                if( loginCadastrado == loginInformado && senhaCadastrada==senhaInformado){
+                    alert(`Seja bem vindo, ${loginCadastrado}`)
+                    tentativa= maximoTentaticas;
+                }
+                else if( tentativa == 3){
+                    alert("Maximo te tentivas alcançadas. Conta bloqueada!")
+                }
+
+                else{
+                    alert("Login inválido, tente novamennte!")
+                    
+                }
+                tentativa++
+            }
+            
+
+
+
+                    
+
+           mostra("FIM!")
+
+        </script>
+            
+            
+
+        
+ </body>
+ </html>
+ 

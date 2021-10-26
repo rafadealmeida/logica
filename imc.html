@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+
+    <h3>IMC</h3>
+     <script>
+      function pularLinha(){
+          document.write("<br>")
+      }
+      function mostra(resultado){
+          pularLinha();
+          document.write(resultado);
+          pularLinha();
+
+      }
+
+      var altura =Number(window.prompt("Digite sua Altura!(digite com ponto)"));
+       var peso =Number(window.prompt("Digite o seu peso!"));
+      var imc = peso / (altura*altura); 
+      
+      var imc = imc.toFixed(2);
+     
+      
+
+      
+      
+
+         if (imc < 18.5) {
+            mostra(`Seu IMC é ${imc} kg/m <sup>2</sup> está na faixa da Magreza`);
+        
+        } else if (imc >= 18.5 && imc <24.9 ){ 
+            mostra(`Seu IMC é ${imc} kg/m <sup>2</sup> está na faixa Normal`);
+        
+        } else if (imc >= 24.9 && imc <30 ){ 
+            mostra(`Seu IMC é ${imc} kg/m <sup>2</sup> está na faixa  do Sobrepeso`)
+        
+        }else{ 
+            mostra(`Seu IMC é ${imc} kg/m <sup>2</sup> está na faixa da Obesidade`);
+      }
+
+      
+      
+
+     </script>
+     
+ </body>
+ </html>
+ 

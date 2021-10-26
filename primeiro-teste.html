@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+
+    <h3>Diferença de idade</h3>
+     <script>
+      function pularLinha(){
+          document.write("<br>")
+      }
+      function mostra(resultado){
+          pularLinha();
+          document.write(resultado);
+          pularLinha();
+
+      }
+
+      var suaIdade =Number(window.prompt("Digite sua idade!"));
+       var idadePrimo =Number(window.prompt("Digite a idade do seu primo!"));
+      var diferencaIdade = suaIdade - idadePrimo;
+
+      
+      
+
+      if (diferencaIdade < 0) {
+          (diferencaIdade * -1);
+      } else{ 
+        (diferencaIdade * 1)
+      }
+
+      mostra(`A diferença de idade é de ${diferencaIdade} anos`);
+      mostra('é isso');
+      
+      
+
+     </script>
+     
+ </body>
+ </html>
+ 

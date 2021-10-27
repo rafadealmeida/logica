@@ -31,14 +31,19 @@
             }
 
             
-            var numero = Number(prompt("Digite a quantidade de familiares que você desejar calcular a média."))
+            var numeroParentes = Number(prompt("Digite a quantidade de familiares que você desejar calcular a média."))
+            var totalIdade = 0
 
-            for(var multiplicador = 1; multiplicador<=10;multiplicador++){
-                var tabuada = numero * multiplicador;
-                mostra(`Resultado  de ${numero} vezes ${multiplicador} = ${tabuada}`);
+
+            for(var i=1 ; i<= numeroParentes ;i++){
+                var idadeParente = Number(prompt("Digite a idade do seu parente"))
+                totalIdade = totalIdade + idadeParente;
                 
             }
-          
+             var mediaIdade = totalIdade/numeroParentes
+            
+             mostra(`A média dos seus ${numeroParentes} é de ${mediaIdade} anos.`)
+
         </script>
             
             

@@ -17,6 +17,7 @@
             var input = document.querySelector("input");
             var button = document.querySelector("button");
             var numeroEscolhidos = adicionarArray(5);
+            button.onclick= verifica;
 
             input.focus();
 
@@ -45,13 +46,14 @@
                         break;
                     }
 
-                    else if ( achou == false){
-                        alert("Você não conseguiu dessa vez!")
-                    }
-                    
+                    input.value=""
                     input.focus();
+                    
                 }
-
+                if ( achou == false){
+                    alert("Você não conseguiu dessa vez!")
+                }
+                
             }
             
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de array</title>
+</head>
+<body>
+
+    <h2>Descubra o número.</h2>
+
+    <input type="number" name="" id="Numero">
+    <button id="Numero">Tenta a sorte!</button>
+
+        <script>
+            var input = document.querySelector("input");
+            var button = document.querySelector("button");
+            var numeroEscolhidos = adicionarArray(5);
+
+            input.focus();
+
+            function sorteia(){
+                return Math.round(Math.random()*10);
+            }
+
+            function adicionarArray(quantidade){
+                
+                numeroEscolhidos = [];
+
+                for(i=1; i<= quantidade; i++){
+                    numeroEscolhidos.push(sorteia());
+                }
+                return numeroEscolhidos;
+            } 
+            console.log(numeroEscolhidos)
+
+            function verifica(){
+                var achou = false;
+                
+                for(posicao = 0; posicao < numeroEscolhidos.length; posicao++){
+                    if(input.value == numeroEscolhidos[posicao]){
+                        alert("Você acertou!")
+                        achou = true;
+                        break;
+                    }
+
+                    else if ( achou == false){
+                        alert("Você não conseguiu dessa vez!")
+                    }
+                    
+                    input.focus();
+                }
+
+            }
+            
+
+        </script>
+    
+</body>
+</html>

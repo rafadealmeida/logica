@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ 
+        <style>
+            body{
+                line-height: 2em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+ 
+    </head>
+ <body>
+
+
+
+        <h3>Ano de Copa</h3>
+   
+     <label for="Adivinhação"><input type="number" name="Adivinhação" id="Adivinhação">Tenta a sorte!</label>
+
+
+
+
+
+
+        <script>
+            function pulaLinha() {
+                document.write("<br>");
+            }
+        
+            function mostra(frase) {
+                document.write(frase);
+                pulaLinha();
+            }
+
+            
+            var totalChance = 3;
+            var numeroEscolhido = Math.round(Math.random()*10);
+            console.log(numeroEscolhido)
+
+            for(var chance = 1; chance<=2 ;chance++){
+
+                if(numeroEscolhido == chute){
+                    alert("Você acertou parabéns!")
+                    mostra(`Parabéns você consegui adivinhar que o numero escolhido era ${numeroEscolhido}`)
+                    break;
+                }
+                
+                else{
+                    var chute = Number(prompt(`Você errou tente novamente!Digite o número de 1 até 10.`))
+                    
+                }
+                mostra(`Você não consegui acertar! O  número escolhido era ${numeroEscolhido}.`)
+            }
+
+
+
+           
+        </script>
+            
+            
+
+        
+ </body>
+ </html>
+ 

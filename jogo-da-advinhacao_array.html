@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ 
+        <style>
+            body{
+                line-height: 2em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+ 
+    </head>
+ <body>
+
+
+
+        <h3>Ano de Copa</h3>
+    <input  style="padding: 10px;" type="number" name="Chute" id="Chute"> 
+    <button style="padding: 10px;" id="Chute">Tenta a sorte!</button>
+
+
+    <!--Css inline só para exemplificar  -->
+
+
+
+
+        <script>
+            function pulaLinha() {
+                document.write("<br>");
+            }
+        
+            function mostra(frase) {
+                document.write(frase);
+                pulaLinha();
+            }
+
+            var numeroEscolhido = [2,5,7,10];
+            console.log(numeroEscolhido)
+
+            var input = document.querySelector("input");
+            input.focus();
+            
+
+            function verifica () {
+                var achou = false
+                
+                for (posicao =0; posicao < numeroEscolhido.length; posicao++) {
+                    
+                    if (input.value == numeroEscolhido[posicao]){
+                        alert( 'Você acertou!');
+                        achou = true
+                        break;
+                    }
+                    
+                    else if (achou == false){
+                        alert("Você errou! ")
+                    }
+                    
+                    input.value = "";
+                    
+                    input.focus();
+                    }
+
+                }
+            var button = document.querySelector("button");
+
+            button.onclick=verifica;
+           
+        </script>
+            
+            
+
+        
+ </body>
+ </html>
+ 

@@ -43,14 +43,15 @@
             }
             function sorteiaNumeros(quantidade){//essa função pega os numeros gerados aleatoriamente de outra função ...
                 //... e adiciona ao array até a quantidade(tamanho do array) ser alcançada.
-                var numero = [];
+                var numeroEscolhidos = [];
                 for(contador =1 ; contador <= quantidade; contador++){
-                    numeroEscolhido.push(sorteia());
+                    numeroEscolhidos.push(sorteia());
                 }
+                return 
             }
 
-            var numeroEscolhido = sorteiaNumeros(3);
-            console.log(numeroEscolhido)
+            var numeroEscolhidos = sorteiaNumeros(3);
+            console.log(numeroEscolhidos)
 
             var input = document.querySelector("input");
             input.focus();
@@ -59,9 +60,9 @@
             function verifica () {
                 var achou = false
                 
-                for (posicao =0; posicao < numeroEscolhido.length; posicao++) {
+                for (posicao =0; posicao < numeroEscolhidos.length; posicao++) {
                     
-                    if (input.value == numeroEscolhido[posicao]){
+                    if (input.value == numeroEscolhidos[posicao]){
                         alert( 'Você acertou!');
                         achou = true
                         break;

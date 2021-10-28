@@ -38,17 +38,18 @@
                 pulaLinha();
             }
 
-            function sorteia(){
+            function sorteia(){ //defini uma função para retornar numeros sorteados aleatoriamente. 
                 return Math.round(Math.random()*10);
             }
-            function sorteiaNumeros(quantidade){
+            function sorteiaNumeros(quantidade){//essa função pega os numeros gerados aleatoriamente de outra função ...
+                //... e adiciona ao array até a quantidade(tamanho do array) ser alcançada.
                 var numero = [];
                 for(contador =1 ; contador <= quantidade; contador++){
                     numeroEscolhido.push(sorteia());
                 }
             }
 
-            var numeroEscolhido = [2,5,7,10];
+            var numeroEscolhido = sorteiaNumeros(3);
             console.log(numeroEscolhido)
 
             var input = document.querySelector("input");

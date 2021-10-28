@@ -31,20 +31,22 @@
                 var i =1
                 while(i<= quantidade){
                     var numeroAleatorio = sorteia();
-                    var achou = false; 
-                    
-                    for(posicao = 0; posicao < numeroEscolhidos.length; posicao++){
-                        if (numeroEscolhidos[posicao]==numeroAleatorio){
-                            achou=true;
-                            break;
+                   
+                    if (numeroAleatorio !==0){// para nao ter numero 0 no array 
+                        var achou = false; 
+                        
+                        for(posicao = 0; posicao < numeroEscolhidos.length; posicao++){
+                            if (numeroEscolhidos[posicao]==numeroAleatorio ){
+                                achou=true;
+                                break;
+                            }
+                        }
+                        
+                        if(achou==false){
+                            numeroEscolhidos.push(numeroAleatorio)
+                            i++
                         }
                     }
-                    
-                    if(achou==false){
-                        numeroEscolhidos.push(numeroAleatorio)
-                        i++
-                    }
-                    
 
                 }
                 return numeroEscolhidos;

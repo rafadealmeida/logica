@@ -19,9 +19,8 @@
 
 
         <h3>Ano de Copa</h3>
-   
-     <label for="Adivinhação"><input type="number" name="Adivinhação" id="Adivinhação">Tenta a sorte!</label>
-
+    <input type="number" name="Chute" id="Chute">
+    <button id="Chute">Tenta a sorte!</button>
 
 
 
@@ -39,26 +38,28 @@
 
             
             var totalChance = 3;
-            var numeroEscolhido = Math.round(Math.random()*10);
+            var numeroEscolhido = 9;
             console.log(numeroEscolhido)
 
-            for(var chance = 1; chance<=2 ;chance++){
+            var input = document.querySelector("input");
 
-                if(numeroEscolhido == chute){
-                    alert("Você acertou parabéns!")
-                    mostra(`Parabéns você consegui adivinhar que o numero escolhido era ${numeroEscolhido}`)
-                    break;
-                }
+           
+                function verifica () {
+                    if (input.value == numeroEscolhido){
+                        alert( 'Você acertou!');
+                        
+                    }
+                    else{
+                        alert("Você errou tente novamente!");
+                        var button = document.querySelector("button");
+                        
+                    }
                 
-                else{
-                    var chute = Number(prompt(`Você errou tente novamente!Digite o número de 1 até 10.`))
-                    
                 }
-                mostra(`Você não consegui acertar! O  número escolhido era ${numeroEscolhido}.`)
-            }
+            
+            var button = document.querySelector("button");
 
-
-
+            button.onclick=verifica;
            
         </script>
             

@@ -9,9 +9,13 @@
 <body>
     <h1>Adicione ingredientes de uma receita</h1>
 
+
+
     <script>
         
         var ingredientes = [];
+
+        var quantidadeIngredientes= [];
         
         var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
         
@@ -23,14 +27,15 @@
         
         while( contador <= quantidade) {
             
-            var ingrediente = prompt("Informe o ingrediente " + contador);
-            
             var igualdade = false
+            
+            var ingrediente = prompt("Informe o ingrediente " + contador);
 
             for(posicao=0; posicao<ingredientes.length; posicao++){
                 
                 if(ingredientes[posicao] == ingrediente){
                     igualdade = true;
+                    alert(`Ingrediente repetido, tente novamente!`)
                     break;
                 }
             }
@@ -43,8 +48,24 @@
         
             
         }
+
+        var i = 1;
         
-        mostra(`Sua receita tem ${quantidade} ingredientes, sendo eles ${ingredientes}`)
+        for(posicao2=0; posicao2<ingredientes.length; posicao2++){
+            
+            var quantidadeIngrediente = Number(prompt(`Digite a quantidade, em gramas do ingrediente ${i}`))
+            
+            quantidadeIngredientes[posicao2]=quantidadeIngrediente;
+
+            i++;
+        }
+
+            console.log(quantidadeIngredientes);
+
+           
+        
+        mostra(`Sua receita tem ${quantidade} ingredientes, sendo eles ${ingredientes} <br> com a quantidade de ${quantidadeIngredientes[0]}gr 
+        e ${quantidadeIngredientes[1]} gr sucessivamente.`)
         
         console.log(ingredientes);
     

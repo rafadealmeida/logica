@@ -18,7 +18,7 @@
 
 
 
-        <h3>Jogo de Advinhação</h3>
+        <h3>Jogo de Adivinhação</h3>
    
         <script>
             function pulaLinha() {
@@ -33,14 +33,14 @@
             
             var chute = Number(prompt("Digite o número de 0 até 10."))
             var totalChance = 3;
-            var numeroEscolhico = Math.round(Math.random()*10);
-            console.log(numeroEscolhico)
+            var numeroEscolhido = Math.round(Math.random()*10);
+            console.log(numeroEscolhido)
 
             for(var chance = 1; chance<=2 ;chance++){
 
-                if(numeroEscolhico == chute){
+                if(numeroEscolhido == chute){
                     alert("Você acertou parabéns!")
-                    mostra(`Parabéns você consegui advinhar que o numero escolhido era ${numeroEscolhico}`)
+                    mostra(`Parabéns você consegui adivinhar que o numero escolhido era ${numeroEscolhido}`)
                     break;
                 }
                 
@@ -48,7 +48,7 @@
                     var chute = Number(prompt(`Você errou tente novamente!Digite o número de 1 até 10.`))
                     
                 }
-                mostra(`Você não consegui acertar! O  número escolhido era ${numeroEscolhico}.`)
+                mostra(`Você não consegui acertar! O  número escolhido era ${numeroEscolhido}.`)
             }
             
         </script>

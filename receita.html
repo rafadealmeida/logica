@@ -16,6 +16,10 @@
         var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
         
         var contador = 1;
+
+        function mostra(frase){
+            document.write(frase);
+        }
         
         while( contador <= quantidade) {
             
@@ -37,8 +41,10 @@
                 contador++;
             }
         
-        
+            
         }
+        
+        mostra(`Sua receita tem ${quantidade} ingredientes, sendo eles ${ingredientes}`)
         
         console.log(ingredientes);
     

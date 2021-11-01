@@ -27,57 +27,68 @@
 
     <script>
         var input = document.querySelector("input");
-        var button= document.querySelector("button");
-        var numerosSorteados = [];
+        var button = document.querySelector("button");
+        var numeroEscolhidos = adicionarArray(3);
+        button.onclick = verifica;
+
         input.focus();
-        
-        function mostra(frase){
-            document.write(frase);
-            document.write("<br>")
-        }
-    
-        function sorteiaNumeros() {
-            return Math.round(Math.random()*10)
+
+        function sorteia() {
+           return Math.round(Math.random()*10)
         }
 
-        function adicionarNumeros(quantidade) {
-            for(i=1;i<=quantidade;i++){
-                numerosSorteados.push(sorteiaNumeros())
+        function adicionarArray(quantidade) {
+            
+            var numeroEscolhidos = [];
+
+            var i = 1;
+
+            while(i<=quantidade){
+                var numeroAleatorio = sorteia()
+
+                if (numeroAleatorio !==0){
+                    var existe = false;
+
+                    for(posicao=0;posicao<numeroEscolhidos.length; posicao++){
+                        if(numeroEscolhidos[posicao] == numeroAleatorio){
+                            existe = true;
+                            break;
+                        }
+                    }
+
+                    if(existe == false){
+                        numeroEscolhidos.push(numeroAleatorio);
+                        i++;
+                    }
+                }
             }
-            return numerosSorteados
+
+            return numeroEscolhidos;
+
         }
+
+        console.log(numeroEscolhidos);
 
         function verifica() {
-            
             var existe = false;
 
-            for(posicao = 0; posicao < numerosSorteados.length; posicao++){
-                if( input.value == numerosSorteados[posicao]){
-                    existe = true;
-                    alert("Você acertou!");
+            for(posicao=0; posicao< numeroEscolhidos.length; posicao++){
+                if(input.value == numeroEscolhidos[posicao]){
+                    alert("Você acertou! Parabéns!");
+                    achou = true;
                     break;
                 }
 
                 input.value="";
                 input.focus();
-
             }
-            
-            if (existe==false){
-                alert('Você errou!')
+            if(existe==false){
+                alert("Você não conseguiu dessa vez!")
             }
-
 
         }
 
 
-
-
-        button.onclick = verifica;
-
-        var numerosSorteados=adicionarNumeros(3)
-
-        console.log(numerosSorteados)
 
 
 

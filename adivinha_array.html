@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>Treino de array e function</title>
  
         <style>
             body{
@@ -29,6 +29,7 @@
         var input = document.querySelector("input");
         var button= document.querySelector("button");
         var numerosSorteados = [];
+        input.focus();
         
         function mostra(frase){
             document.write(frase);
@@ -40,10 +41,24 @@
         }
 
         function adicionarNumeros(quantidade) {
+            for(i=1;i<=quantidade;i++){
+                numerosSorteados.push(sorteiaNumeros())
+            }
+            return numerosSorteados
+        }
+
+        function verifica() {
             
         }
 
 
+
+
+
+
+        var numerosSorteados=adicionarNumeros(3)
+
+        console.log(numerosSorteados)
 
 
 

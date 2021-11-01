@@ -49,12 +49,31 @@
 
         function verifica() {
             
+            var existe = false;
+
+            for(posicao = 0; posicao < numerosSorteados.length; posicao++){
+                if( input.value == numerosSorteados[posicao]){
+                    existe = true;
+                    alert("Você acertou!");
+                    break;
+                }
+
+                input.value="";
+                input.focus();
+
+            }
+            
+            if (existe==false){
+                alert('Você errou!')
+            }
+
+
         }
 
 
 
 
-
+        button.onclick = verifica;
 
         var numerosSorteados=adicionarNumeros(3)
 
